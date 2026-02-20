@@ -16,6 +16,7 @@ public class ProductArrayDemo
 			
 			Product[] pd=new Product[size];
 			
+			
 			for (int i = 0; i < pd.length; i++) 
 			{
 				System.out.println("Enter the id:");
@@ -27,7 +28,7 @@ public class ProductArrayDemo
 				pd[i]=new Product(id, name, price);
 				
 			}
-			int piSearch=Integer.parseInt(IO.readln("Enter the product id:"));
+			int piSearch=Integer.parseInt(IO.readln("Enter details for Product:"));
 			
 			for(Product pid:pd)
 			{
