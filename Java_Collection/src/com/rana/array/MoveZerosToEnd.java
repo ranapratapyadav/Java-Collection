@@ -62,22 +62,35 @@ public class MoveZerosToEnd
             IO.print(arr[i]+" ");
         }
 
+//        int temp=0;
+//        for(int i=0;i<arr.length;i++)
+//        {
+//            if(arr[i]==0){
+//            for(int j=0;j<arr.length;j++)
+//            {
+//                if(arr[j]!=0)
+//                {
+//                    temp=arr[i];
+//                    arr[i]=arr[j];
+//                    arr[j]=temp;
+//                    break;
+//                }
+//            }
+//        }
         int temp=0;
-        for(int i=0;i<arr.length;i++)
+        int index=0;
+        
+        for (int i = 0; i < arr.length; i++) 
         {
-            if(arr[i]!=0){
-            for(int j=0;j<arr.length;j++)
-            {
-                if(arr[j]==0)
-                {
-                    temp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=temp;
-                    break;
-                }
-            }
-        }
-        }
+			if(arr[i]!=0)
+			{
+				temp=arr[i];
+				arr[i]=arr[index];
+				arr[index]=temp;
+				index++;
+			}
+		}
+        
         IO.print("\nArray After Moving Zeros to End: ");
         for(int i=0;i<arr.length;i++)
         {
