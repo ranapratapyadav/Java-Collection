@@ -21,6 +21,8 @@ public class FindMinimumNumber {
 			}
 			FindMinimum.minValue(arr);
 			
+			FindMaximum.maxValue(arr);
+			
 		}
 		catch (NegativeArraySizeException e) 
 		{
@@ -50,5 +52,21 @@ class FindMinimum
 			}
 		}
 		System.out.println("Min number of arr"+min);
+	}
+}
+
+class FindMaximum
+{
+	public static void maxValue(int[]arr)
+	{
+		int max= arr[0];
+		for (int i = 0; i < arr.length; i++) 
+		{
+			if(max<arr[i])
+			{
+				max=arr[i];
+			}
+		}
+		System.out.println("Min number of arr"+max);
 	}
 }
